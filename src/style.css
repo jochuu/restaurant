@@ -7,11 +7,12 @@
 }
 
 :root {
-	--main: #5A5A76;
-	--accent-1: #ecd4c4;
-	--accent-2: #8ea5a5;
-	--white: #fcfcfc;
-	--black: #333333;
+	--main: rgb(90, 90, 118);
+	--accent-1: rgb(236, 213, 197);
+	--accent-1-faded: rgb(236, 213, 197, 0.3);
+	--accent-2: rgb(142, 165, 165);
+	--white: rgb(252, 252, 252);
+	--black: rgb(51, 51, 51);
 
 	font-family: 'GlacialIndifference';
 	background: var(--main);
@@ -104,6 +105,19 @@ button:hover {
 	width: 80%;
 } */
 
+.visible {
+	visibility: visible;
+	opacity: 1;
+	transition: opacity 666ms ease;
+}
+
+.hidden {
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s 2s, opacity 2666ms 1ease;
+}
+
+
 .container {
 	display: flex;
 	flex-flow: column wrap;
@@ -162,4 +176,23 @@ button:hover {
 .sunday {
 	display: flex;
 	color: var(--white);
+}
+
+.menu-items-container {
+	display: flex;
+	flex-flow: row wrap;
+	width: 80%;
+	outline: dotted;
+	outline-color: var(--accent-1-faded);
+	justify-content: space-around;
+}
+
+.item-container {
+	padding: 1vh;
+}
+
+.header {
+	width: 100%;
+	margin: 3vh auto;
+	text-align: center;
 }

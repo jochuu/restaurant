@@ -1,6 +1,5 @@
 function header() {
 	const container = document.createElement('div');
-	container.classList.add('header');
 
 	const header = document.createElement('h1');
 	header.innerHTML = 'Project: restaurant';
